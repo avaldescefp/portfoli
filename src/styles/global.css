@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../assets/fonts/Inconsolata.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-inconsolata {
+  font-family: "Inconsolata", sans-serif;
+}
+
+@import "tailwindcss";

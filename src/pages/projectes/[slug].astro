@@ -1,0 +1,53 @@
+---
+import Navegacio from "../../components/Navegacio.astro";
+import Titol from "../../components/Titol.astro";
+import Peu from "../../components/Peu.astro";
+import Layout from "../../layouts/Layout.astro";
+import projectesData from "../../assets/data/cv.json";
+import "../../styles/global.css";
+
+//Funció que retorna totes les rutes dinàmiques per generar a la compilació
+export async function getStaticPaths() {
+  //Mapejar els projectes per generar els paràmetres slug per cada ruta dinàmica
+  const paths = projectesData.projects.map((projecte) => ({
+    params: { slug: projecte.slug }, //L'slug de cada projecte serà usat per la ruta dinàmica
+    // Exemple de la sortida seria:   [{ "params": { "slug": "taskmanager-app" } },{ "params": { "slug": "e-commerce-platform" } }]
+  }));
+  return paths;
+}
+
+//Obtenir l'slug de la ruta dinàmica
+const { slug } = Astro.params;
+
+//Busquem el projecte per slug
+const projecte = projectesData.projects.find(
+  (projecte) => projecte.slug === slug
+);
+
+//Si no trobes el projecte, llança error
+if (!projecte) {
+  throw new Error("Projecte no trobat");
+}
+---
+
+<Layout>
+  <Navegacio />
+  <main>
+    <Titol title={projecte.name} />
+    <div class="flex flex-col w-3/4 sm:w-lg md:w-xl mx-auto gap-6 mt-6">
+      <span class="font-sans font-semibold text-lg text-[#64748B]">
+        {projecte.description}
+      </span>
+      <img
+        src={projecte.image}
+        alt=`Imatge de ${projecte.name}`
+        class="rounded-2xl"
+      />
+      <a class="font-inconsolata font-semibold" href={`${projecte.url}`}
+        >{projecte.url}</a
+      >
+    </div>
+    <hr class="w-3/4 mt-6 sm:w-lg md:w-xl mx-auto border-gray-400 opacity-50" />
+  </main>
+  <Peu />
+</Layout>

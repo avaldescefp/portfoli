@@ -1,0 +1,64 @@
+---
+import Navegacio from "../components/Navegacio.astro";
+import Titol from "../components/Titol.astro";
+import Boto from "../components/Boto.astro";
+import Peu from "../components/Peu.astro";
+import Layout from "../layouts/Layout.astro";
+import cvData from "../assets/data/cv.json";
+import "../styles/global.css";
+---
+
+<Layout>
+  <Navegacio />
+  <main>
+    <Titol title=`Hola, sóc ${cvData.name}.` />
+    <section id="hero" class="mt-1 w-3/4 sm:w-lg md:w-xl mx-auto">
+      <h2 class="font-sans font-semibold text-2xl text-[#64748B]">
+        {cvData.title}
+      </h2>
+      <p class="font-sans font-semibold text-lg text-[#334155] mt-4 max-w-lg">
+        {cvData.brief_profile_summary}
+      </p>
+    </section>
+    <Boto link="/informacio" textLink="Més informació" />
+    <hr class="w-3/4 sm:w-lg md:w-xl mx-auto border-gray-400 opacity-50" />
+    <section id="projects" class="mt-14 mb-12 w-full max-w-screen-lg mx-auto">
+      <div class="w-3/4 sm:w-lg md:w-xl mx-auto">
+        <h2 class="font-sans font-semibold text-2xl text-left">
+          Projectes personals
+        </h2>
+        <p
+          class="font-sans font-semibold text-lg text-[#334155] mt-4 mb-16 max-w-lg text-left"
+        >
+          A continuació es mostra una selecció de projectes recents en els quals
+          he treballat.
+        </p>
+      </div>
+      <ul class="grid grid-cols-1 xl:grid-cols-2 gap-y-12 place-items-center">
+        {
+          cvData.projects.map((pro) => (
+            <li class="flex justify-center w-full md:w-[450px] px-8 sm:px-0">
+              <a
+                class="flex flex-col bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8 w-[450px]"
+                href={`${pro.url}`}
+              >
+                <img
+                  src={`${pro.image}`}
+                  alt={`Imatge de ${pro.name}`}
+                  class="w-[450px] h-[240px] rounded-2xl object-cover border-8 border-gray-200"
+                />
+                <span class="text-slate-700 text-xl font-semibold mt-4">
+                  {pro.name}
+                </span>
+                <span class="text-slate-500 text-lg">{pro.description}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <Boto link="/projectes" textLink="Veure projectes anteriors" />
+    <hr class="w-3/4 sm:w-lg md:w-xl mx-auto border-gray-400 opacity-50 mb-8" />
+  </main>
+  <Peu />
+</Layout>

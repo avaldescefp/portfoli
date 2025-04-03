@@ -1,0 +1,137 @@
+---
+import Navegacio from "../components/Navegacio.astro";
+import Titol from "../components/Titol.astro";
+import Peu from "../components/Peu.astro";
+import Layout from "../layouts/Layout.astro";
+import cvData from "../assets/data/cv.json";
+import "../styles/global.css";
+
+const badgeColors = [
+  "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
+  "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300",
+  "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300",
+  "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300",
+  "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300",
+  "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
+  "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
+];
+
+const getFlag = (language: string) => {
+  switch (language.toLowerCase()) {
+    case "anglès":
+      return "/flags/english.png";
+    case "espanyol":
+      return "/flags/spanish.png";
+    case "català":
+      return "/flags/catalan.png";
+    default:
+      return "/flags/default.png";
+  }
+};
+---
+
+<Layout>
+  <Navegacio />
+  <main>
+    <Titol title="Informació" />
+    <hr class="w-3/4 mt-6 sm:w-lg md:w-xl mx-auto border-gray-400 opacity-50" />
+    <p
+      class="whitespace-pre-line font-sans font-medium text-lg text-[#334155] mt-6 mb-4 max-w-[605px] mx-auto px-4"
+    >
+      {cvData.profile_summary}
+      <a href="/contacte" class="underline text-black">{cvData.contact.Email}</a
+      >.
+    </p>
+    <section id="skills" class="mt-16 w-3/4 sm:w-lg md:w-xl mx-auto">
+      <h2 class="font-sans font-semibold text-2xl">Skills</h2>
+      <ul class="flex flex-wrap mt-8 mb-10 gap-2">
+        {
+          cvData.skills.map((skill, index) => (
+            <li>
+              <span
+                class={`text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm ${badgeColors[index % badgeColors.length]}`}
+              >
+                {skill}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section id="idiomes" class="mt-16 w-3/4 sm:w-lg md:w-xl mx-auto">
+      <h2 class="font-sans font-semibold text-2xl">Idiomes</h2>
+      <ul class="flex flex-wrap mt-8 mb-10 gap-2">
+        {
+          cvData.languages.map((lang) => (
+            <li class="px-3 py-1 rounded flex items-center gap-2">
+              <img
+                src={getFlag(lang.language)}
+                alt={`Bandera de ${lang.language}`}
+                class="w-6 h-6"
+              />
+              <span class="text-slate-700 font-semibold">
+                {lang.language}: {lang.level}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section id="experience" class="mt-16 w-3/4 sm:w-lg md:w-xl mx-auto">
+      <h2 class="font-sans font-semibold text-2xl">Experiència</h2>
+      <ul class="mt-8 mb-10">
+        {
+          cvData.experience.map((exp) => (
+            <li class="flex mb-4 gap-4 items-start">
+              <img
+                src={`${exp.logo}`}
+                alt={`Logo de ${exp.company}`}
+                class="w-12 h-12"
+              />
+              <div class="flex flex-col">
+                <span class="text-slate-800 text-xl font-semibold leading-none mb-1">
+                  {exp.company}
+                </span>
+                <span class="text-slate-700 text-lg">{exp.position}</span>
+                <span class="text-slate-700 italic">
+                  {exp.responsibilities[0]}
+                </span>
+                <span class="block mt-4 text-slate-500 col-span-2 text-sm font-medium tracking-tighter font-mono">
+                  {exp.duration}
+                </span>
+                <hr class="w-3/5 sm:w-md md:w-lg border-gray-400 opacity-50 mt-6" />
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <section id="education" class="mt-16 w-3/4 sm:w-lg md:w-xl mx-auto">
+      <h2 class="font-sans font-semibold text-2xl">Formació</h2>
+      <ul class="mt-8 mb-10">
+        {
+          cvData.education.map((edu) => (
+            <li class="flex mb-4 gap-4 items-start">
+              <img
+                src={`${edu.logo}`}
+                alt={`Logo de ${edu.institution}`}
+                class="w-12 h-12"
+              />
+              <div class="flex flex-col">
+                <span class="text-slate-800 text-xl font-semibold leading-none mb-1">
+                  {edu.degree}
+                </span>
+                <span class="text-slate-700 text-lg">{edu.institution}</span>
+                <span class="block mt-4 text-slate-500 col-span-2 text-sm font-medium tracking-tighter font-mono">
+                  {edu.year}
+                </span>
+                <hr class="w-3/5 sm:w-md md:w-lg border-gray-400 opacity-50 mt-6" />
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+  <Peu />
+</Layout>

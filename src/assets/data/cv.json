@@ -1,0 +1,118 @@
+{
+  "name": "Antonio",
+  "title": "Un desenvolupador web de Barcelona.",
+  "brief_profile_summary": "Desenvolupador web apassionat per crear aplicacions web escalables i amb més de 5 anys d'experiència en tecnologies modernes com React, Node.js i Vue.js. Em dedico a dissenyar i implementar solucions que millorin l'experiència de l'usuari.",
+  "profile_summary": "Hola a tots, sóc Antonio. Construeixo els meus propis productes, a més de treballar amb algunes empreses increïbles per ajudar-les a construir els seus. \n\nMés recentment, vaig estar treballant amb MoonPay per ajudar a construir el futur dels pagaments. Inicialment em vaig incorporar com a dissenyador de productes, vaig passar a una funció d'enginyer web on vaig treballar amb diversos equips per ajudar a repensar la banca moderna per als seus milions de clients. \n\nTambé vaig treballar amb Kalo (que finalment es va convertir en Polywork) on vaig ser la primera contractació d'enginyeria d'IU. Les meves responsabilitats incloïen la construcció del sistema de disseny, així com la garantia d'una alta qualitat de disseny en tot el producte. \n\nSempre he treballat entre el disseny i l'enginyeria, però el fil conductor sempre ha estat el meu amor per construir coses que a la gent li agrada fer servir. \n\nSi esteu interessats en que treballem junts, no dubteu en posar-vos en contacte amb mi aquí: ",
+  "contact": {
+    "Email": "hola@antoniovaldes.com",
+    "Telèfon": "+34 555 123 456",
+    "GitHub": "https://github.com/avaldescefp",
+    "LinkedIn": "https://www.linkedin.com"
+  },
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Astro",
+    "Vue.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "HTML",
+    "CSS",
+    "SASS",
+    "TailwindCSS",
+    "Bootstrap",
+    "Git",
+    "Docker",
+    "CI/CD",
+    "Testing (Jest, Cypress)"
+  ],
+  "experience": [
+    {
+      "logo": "/images/techsolutions.png",
+      "position": "Desenvolupador Full Stack",
+      "company": "TechSolutions",
+      "duration": "Novembre 2021 --> Present",
+      "responsibilities": [
+        "Desenvolupament i manteniment d'aplicacions web amb React i Node.js.",
+        "Implementació de bases de dades amb PostgreSQL i MongoDB.",
+        "Integració d'APIs REST i GraphQL.",
+        "Millora del rendiment i accessibilitat de les aplicacions."
+      ]
+    },
+    {
+      "logo": "/images/digitalapps.png",
+      "position": "Desenvolupador Frontend",
+      "company": "DigitalApps",
+      "duration": "Abril 2021 --> Agost 2021",
+      "responsibilities": [
+        "Creació de components UI reutilitzables amb React i TailwindCSS.",
+        "Optimització de la càrrega de pàgines amb tècniques de lazy loading i code splitting.",
+        "Implementació de proves unitàries i e2e amb Jest i Cypress."
+      ]
+    },
+    {
+      "logo": "/images/webtech.png",
+      "position": "Desenvolupador Junior",
+      "company": "WebTech",
+      "duration": "Maig 2018 --> Març 2021",
+      "responsibilities": [
+        "Disseny i implementació de components interactius amb Vue.js.",
+        "Col·laboració en el desenvolupament de funcions backend amb Node.js.",
+        "Millora de la UX/UI amb enfocament en la facilitat d'ús i l'accessibilitat.",
+        "Integració d'APIs i millora de la seguretat de les aplicacions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "logo": "/images/upf.jpg",
+      "degree": "Grau en Enginyeria Informàtica",
+      "institution": "Universitat Pompeu Fabra",
+      "year": "Septembre 2024 --> Present"
+    },
+    {
+      "logo": "/images/fpnuria.jpg",
+      "degree": "FP de Desenvolupament d'Aplicacions Web",
+      "institution": "FP Núria",
+      "year": "Septembre 2022 --> Maig 2024"
+    }
+  ],
+  "languages": [
+    { "language": "Català", "level": "Nadiu" },
+    { "language": "Espanyol", "level": "Nadiu" },
+    { "language": "Anglès", "level": "Avançat" }
+  ],
+  "projects": [
+    {
+      "slug": "taskmanager-app",
+      "name": "TaskManager App",
+      "description": "Aplicació de gestió de tasques amb React i Firebase.",
+      "url": "https://taskmanager.dev",
+      "image": "/images/taskmanager-app.webp"
+    },
+    {
+      "slug": "e-commerce-platform",
+      "name": "E-commerce Platform",
+      "description": "Plataforma de comerç electrònic desenvolupada amb Vue.js i Node.js.",
+      "url": "https://ecommerce.example.com",
+      "image": "/images/e-commerce-platform.webp"
+    },
+    {
+      "slug": "blog-cms",
+      "name": "Blog CMS",
+      "description": "Sistema de gestió de continguts per blogs amb Astro i Markdown.",
+      "url": "https://blogcms.dev",
+      "image": "/images/blog-cms.webp"
+    },
+    {
+      "slug": "fitness-tracker",
+      "name": "Fitness Tracker",
+      "description": "Aplicació per monitoritzar entrenaments i progrés físic.",
+      "url": "https://fitnesstracker.dev",
+      "image": "/images/fitness-tracker.webp"
+    }
+  ]
+}
