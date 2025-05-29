@@ -90,29 +90,51 @@
       "slug": "taskmanager-app",
       "name": "TaskManager App",
       "description": "Aplicació de gestió de tasques amb React i Firebase.",
+      "detail": "/projectes/taskmanager-app",
       "url": "https://taskmanager.dev",
-      "image": "/images/taskmanager-app.webp"
+      "image": "/images/taskmanager-app",
+      "text": "",
+      "license": ""
     },
     {
       "slug": "e-commerce-platform",
       "name": "E-commerce Platform",
       "description": "Plataforma de comerç electrònic desenvolupada amb Vue.js i Node.js.",
+      "detail": "/projectes/e-commerce-platform",
       "url": "https://ecommerce.example.com",
-      "image": "/images/e-commerce-platform.webp"
+      "image": "/images/e-commerce-platform",
+      "text": "",
+      "license": ""
     },
     {
       "slug": "blog-cms",
       "name": "Blog CMS",
       "description": "Sistema de gestió de continguts per blogs amb Astro i Markdown.",
+      "detail": "/projectes/blog-cms",
       "url": "https://blogcms.dev",
-      "image": "/images/blog-cms.webp"
+      "image": "/images/blog-cms",
+      "text": "",
+      "license": ""
     },
     {
       "slug": "fitness-tracker",
       "name": "Fitness Tracker",
       "description": "Aplicació per monitoritzar entrenaments i progrés físic.",
+      "detail": "/projectes/fitness-tracker",
       "url": "https://fitnesstracker.dev",
-      "image": "/images/fitness-tracker.webp"
+      "image": "/images/fitness-tracker",
+      "text": "",
+      "license": ""
+    },
+    {
+      "slug": "energy-drink-pulseshock",
+      "name": "Energy Drink PulseShock",
+      "description": "Beguda energètica amb doble dosi de cafeïna i vitamines del complex B.",
+      "detail": "/projectes/energy-drink-pulseshock",
+      "url": "https://pulseshock.netlify.app/",
+      "image": "/images/energy-drink-pulseshock",
+      "text": "🥤 Objectiu\n\nCrear una pàgina web moderna i visualment impactant per promocionar 'PULSESHOCK', una beguda energètica pensada per a persones actives i creatives. L'objectiu és transmetre energia, velocitat i modernitat, combinant una estètica potent amb una navegació clara i funcional. La web ha estat dissenyada amb HTML i CSS purs, amb un enfocament responsive per adaptar-se a tot tipus de dispositius.\n\n🛠️ Eines utilitzades\n\nHTML5: per estructurar correctament el contingut de la pàgina.\n\nCSS3: per estilitzar els elements, aplicant gradients, animacions i disseny responsive.\n\nFigma: per fer esbossos previs del disseny visual i jerarquia de continguts.\n\nEina de generació d'imatges Midjourney per crear imatges impactants del producte, fons abstractes amb energia visual i escenes publicitàries amb estil modern i futurista.\n\nCoolors: per definir una paleta cromàtica que evoqui energia, força i dinamisme.\n\n🧩 Repte tècnic\n\nEl principal repte va ser integrar imatges generades per IA amb una qualitat visual alta dins d'un entorn HTML/CSS lleuger i ràpid de carregar.\n\nTambé es va treballar en:\n\nMantenir una coherència visual entre totes les imatges generades.\n\nOptimitzar els fitxers d'imatge per a web sense perdre qualitat.\n\nAplicar efectes CSS (hover, transicions, animacions) per donar vida als elements sense recórrer a JavaScript.\n\nAssegurar una accessibilitat bàsica (text alternatiu a imatges, contrastos adequats, etc.).",
+      "license": "Energy Drink PulseShock © 2025 by Antonio Valdés is licensed under CC BY 4.0"
     }
   ]
 }

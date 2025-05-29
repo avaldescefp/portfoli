@@ -38,16 +38,42 @@ if (!projecte) {
       <span class="font-sans font-semibold text-lg text-[#64748B]">
         {projecte.description}
       </span>
-      <img
-        src={projecte.image}
-        alt=`Imatge de ${projecte.name}`
-        class="rounded-2xl"
-      />
+
+      <picture>
+        <source srcset={`${projecte.image}.webp`} type="image/webp" />
+        <img
+          src={`${projecte.image}.png`}
+          alt={`Imatge de ${projecte.name}`}
+          class="rounded-2xl"
+        />
+        <span>{projecte.license}</span>
+      </picture>
+
       <a class="font-inconsolata font-semibold" href={`${projecte.url}`}
         >{projecte.url}</a
       >
     </div>
     <hr class="w-3/4 mt-6 sm:w-lg md:w-xl mx-auto border-gray-400 opacity-50" />
+    <p
+      class="whitespace-pre-line font-sans font-medium text-lg text-[#334155] mt-6 mb-4 max-w-[605px] mx-auto px-4"
+    >
+      {projecte.text}
+    </p>
+    <br />
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      preload="auto"
+      poster="/images/energy-drink-pulseshock.webp"
+      width="570px"
+      height="auto"
+    >
+      <source src="/videos/pulseshock-demo.mp4" type="video/mp4" />
+      El teu navegador no suporta aquest vídeo.
+    </video>
+    <br /><br />
   </main>
   <Peu />
 </Layout>

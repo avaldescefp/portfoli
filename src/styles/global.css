@@ -9,4 +9,9 @@
   font-family: "Inconsolata", sans-serif;
 }
 
+video {
+  display: block;
+  margin: 0 auto;
+}
+
 @import "tailwindcss";

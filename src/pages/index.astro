@@ -40,13 +40,13 @@ import "../styles/global.css";
             <li class="flex justify-center w-full md:w-[450px] px-8 sm:px-0">
               <a
                 class="flex flex-col bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8 w-[450px]"
-                href={`${pro.url}`}
+                href={`${pro.detail}`}
               >
-                <img
-                  src={`${pro.image}`}
-                  alt={`Imatge de ${pro.name}`}
-                  class="w-[450px] h-[240px] rounded-2xl object-cover border-8 border-gray-200"
-                />
+                <picture>
+                  <source srcset={`${pro.image}.webp`} type="image/webp" />
+                  <img src={`${pro.image}.png`} alt={`Imatge de ${pro.name}`} />
+                </picture>
+
                 <span class="text-slate-700 text-xl font-semibold mt-4">
                   {pro.name}
                 </span>
